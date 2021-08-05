@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Stars count={'a'}/>
+      <Stars count={4}/>
     </div>
   );
 }

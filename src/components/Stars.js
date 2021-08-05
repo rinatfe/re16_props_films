@@ -8,9 +8,9 @@ class Stars extends Component {
         super(props);
         this.count = 0;
     }
-    static propTypes = {
+    /*static propTypes = {
         count:PropTypes.number
-    }
+    }*/
 
     render() {
         const {count} = this.props;
@@ -18,11 +18,11 @@ class Stars extends Component {
         const getStars = function(num) {
             let content = [];
             for(let i = 0; i<num; i++) {
-                content.push(<li key={num[i]}>{<Star />}</li>);
+                content.push(<li key={i}>{<Star />}</li>);
             }
             return content;
         }
-        if(this.count > 5 || this.count < 1) {
+        if(this.count > 5 || this.count < 1 || typeof(this.count)!='number') {
             return(<div></div>);
         } else {
             return(
